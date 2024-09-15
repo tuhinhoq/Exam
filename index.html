@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+   
+
+   <script>
+
+
+ //----------------1------------------
+    function calculate(a, b) {
+    return a - b;
+}
+
+
+let result = calculate(10, 5);
+document.write(result +"<br>"); 
+
+
+//------------------2----------------
+
+function isOdd(number) {
+    return number % 2 !== 0;
+}
+
+// Example usage:
+let res = isOdd(7);
+document.write(res +"<br>"); 
+
+
+//----------------3------------------
+
+
+function findMin(numbers) {
+    if (numbers.length === 0) {
+        return undefined; 
+    }
+    let min = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+    return min;
+}
+
+let resultFin = findMin([3, 1, 4, 1, 5, 9, 2, 6, 7, 10, 8]);
+document.write(resultFin +"<br>"); 
+
+
+//----------------4------------------
+
+
+
+function filterEvenNumbers(numbers) {
+    return numbers.filter(number => number % 2 === 0);
+}
+
+
+let resultFil = filterEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+document.write(resultFil +"<br>"); 
+
+
+//-----------------5-----------------
+
+function sortArrayDescending(numbers) {
+    return numbers.slice().sort((a, b) => b - a);
+}
+
+
+let resultDes = sortArrayDescending([3, 1, 4, 11, 5, 9, 2, 6, 5, 3, 15]);
+document.write(resultDes +"<br>"); 
+
+
+//----------------6------------------
+
+
+function lowercaseFirstLetter(str) {
+    if (str.length === 0) {
+        return str;
+    }
+    return str.charAt(0).toLowerCase() + str.slice(1);
+}
+
+
+let resultFir = lowercaseFirstLetter("Hello World");
+document.write(resultFir +"<br>"); 
+
+
+
+//---------------7-------------------
+
+
+function countVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+let vol = countVowels("Hello World");
+document.write(vol +"<br>"); 
+
+//---------------8-------------------
+
+
+function findAverage(numbers) {
+    if (numbers.length === 0) {
+        return 0; 
+    }
+    let sum = numbers.reduce((acc, num) => acc + num, 0);
+    return sum / numbers.length;
+}
+
+
+let avg = findAverage([5, 9, 2, 8, 5]);
+document.write(avg +"<br>"); 
+
+
+
+
+   </script> 
+</body>
+</html>
